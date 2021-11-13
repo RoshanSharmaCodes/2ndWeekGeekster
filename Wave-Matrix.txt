@@ -1,0 +1,20 @@
+function Wave(arr){
+    top=0;
+    while(top<arr.length){
+        
+        if(top<arr.length){
+        for(var i=0;i<arr.length;i++){
+            console.log(arr[i][top])
+        }
+        top++;
+        for(var j=arr.length-1;j>=0;j--){
+            if(arr[j][top]){
+                console.log(arr[j][top])
+            }
+        }
+        top++
+    }
+}
+}
+
+Wave(arr1)

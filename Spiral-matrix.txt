@@ -1,0 +1,45 @@
+let arr = [ [1, 2, 3, 4, 5, 6],
+            [7, 8, 9, 10, 11, 12],
+            [13, 14, 15, 16, 17, 18]
+          ];
+function spiral(arr){
+    var count=1;
+    var top=0;
+    var right = arr[0].length-1;
+    var bottom = 0;
+    var left = arr.length-1;
+    var direction=0;
+    var len =arr[0].length*arr.length;
+    while(count<=len){
+      if(direction===0){
+                for(i=top;i<=right;i++){
+            console.log("loop1",arr[top][i]);
+                    count++;
+        }
+        top++;
+      }else if(direction===1){
+        
+        for(i=top;i<=left;i++){
+            console.log("loop2",arr[i][right]);
+                    count++;
+        }
+         right--;
+      }else if(direction===2){
+                for(i=right;i>=bottom;i--){
+            console.log("loop3",arr[left][i]);
+                    count++;
+        }
+        left--;
+      }else if(direction===3){
+        
+        for(i=left;i>=top;i--){
+            console.log("loop4",arr[i][bottom]);
+                    count++;
+        }
+        bottom++;
+      }
+
+         direction=(direction+1)%4;
+    }
+}
+spiral(arr);

@@ -1,0 +1,40 @@
+//Intersection Usign Binary Search 
+function BinarySearch(arr,val){
+    console.log("gfg")
+    var low=0;
+    var high = arr.length-1;
+    while(low<=high){
+        var mid = Math.floor(low+(high-low)/2);
+        if(arr[mid]===val) return arr[mid];
+        if(arr[mid]<val){
+            low = mid+1;
+        }
+        else{
+            high= mid-1;
+        }
+    }
+    
+    return -1;
+}
+
+function Intersection(arr1,arr2){
+    var arr=[]
+    for(var i=0;i<arr1.length;i++){
+        //console.log(BinarySearch(arr2,2));
+        if(arr1[i] === BinarySearch(arr2,arr1[i])){
+            arr.push(arr1[i]);
+        }
+    }
+    
+    arr = [...new Set(arr)];
+    console.log(arr);
+}
+
+Intersection([1,2,2,4,4,5],[2,3,4]);
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+function MoveEvenOdd(arr){
+    var low = 0;
+    var high = arr.length-1;
+    while(low<=high){
+        if(arr[low]%2===0){
+            low++;
+        }
+        else{
+            var temp = arr[low];
+            arr[low] = arr[high]
+            arr[high] = temp;
+            
+            high--;
+        }
+    }
+    return arr;
+}
+
+
+var result = MoveEvenOdd([3,2,4,5,7,1,9,6])
+console.log(result);

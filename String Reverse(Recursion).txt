@@ -1,0 +1,8 @@
+function revString(str){
+    if(str==="") return "";
+    var len = str.length-1;
+    return str.charAt(len)+revString(str.substr(0,len));    
+}
+var str = "roshan"
+var result = revString(str);
+console.log(result)

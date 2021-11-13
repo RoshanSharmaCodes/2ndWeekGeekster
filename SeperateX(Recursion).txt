@@ -1,0 +1,22 @@
+function SeperateX(str,newstr,id,count){
+    if(id===str.length){
+        while(count>0){
+            newstr=newstr+"x";
+            count--;
+        }
+        return newstr;
+    }
+    if(str[id]==="x"){
+        count++;
+        return SeperateX(str,newstr,id+1,count);
+    }
+    else{
+        newstr=newstr+str[id];
+        return SeperateX(str,newstr,id+1,count);
+    }
+    
+}
+var str=""
+var idx = 0;
+var count = 0;
+console.log(SeperateX("axbxbccxxxd",str,idx,count));

@@ -1,0 +1,10 @@
+function SortedArray(arr,i){   
+    if(i===(arr.length-1)) return true;
+    if(arr[i]<arr[i+1]){
+       return SortedArray(arr,i+1);
+    }else{
+    return false    
+    }
+}
+
+console.log(SortedArray([3,4,6,7],0));
